@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.ppojin'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
