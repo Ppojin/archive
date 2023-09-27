@@ -3,7 +3,7 @@ package com.ppojin.leetcode.leetcode75;
 //880. Decoded String at Index
 public class Solution880 {
     public String decodeAtIndex(String s, int k) {
-        int len = 0;
+        long len = 0;
         int i = 0;
 
         while (len < k) {
@@ -15,18 +15,19 @@ public class Solution880 {
             i++;
         }
 
+        System.out.printf("len = %d, i=%d\n", len, i);
         for (int j = i - 1; j >= 0; j--) {
-            if (Character.isDigit(s.charAt(j))) {
-                len /= (s.charAt(j) - '0');
-                k %= len;
+            char c = s.charAt(j);
+            if (Character.isDigit(c)) {
+                len = len / (c - '0');
+                k = (int) (k % len);
             } else {
                 if (k == 0 || k == len) {
-                    return Character.toString(s.charAt(j));
+                    return Character.toString(c);
                 }
                 len--;
             }
         }
-
         return "";
     }
 }
