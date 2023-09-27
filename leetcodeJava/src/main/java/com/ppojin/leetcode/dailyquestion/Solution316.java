@@ -1,4 +1,4 @@
-package com.ppojin.leetcode.leetcode75;
+package com.ppojin.leetcode.dailyquestion;
 
 import java.util.*;
 

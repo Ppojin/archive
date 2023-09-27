@@ -1,10 +1,8 @@
-package com.ppojin.leetcode.leetcode75;
+package com.ppojin.leetcode.dailyquestion;
 
-import org.junit.jupiter.api.Test;
+import com.ppojin.leetcode.dailyquestion.Solution880;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 

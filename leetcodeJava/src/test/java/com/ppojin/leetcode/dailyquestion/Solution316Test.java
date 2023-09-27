@@ -1,5 +1,6 @@
-package com.ppojin.leetcode.leetcode75;
+package com.ppojin.leetcode.dailyquestion;
 
+import com.ppojin.leetcode.dailyquestion.Solution316;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

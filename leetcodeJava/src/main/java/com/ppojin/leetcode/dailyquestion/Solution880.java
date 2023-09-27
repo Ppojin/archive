@@ -1,4 +1,4 @@
-package com.ppojin.leetcode.leetcode75;
+package com.ppojin.leetcode.dailyquestion;
 
 //880. Decoded String at Index
 public class Solution880 {
