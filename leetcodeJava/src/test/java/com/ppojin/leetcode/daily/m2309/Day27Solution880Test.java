@@ -1,13 +1,12 @@
-package com.ppojin.leetcode.dailyquestion;
+package com.ppojin.leetcode.daily.m2309;
 
-import com.ppojin.leetcode.dailyquestion.Solution880;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Solution880Test {
-    Solution880 solution = new Solution880();
+class Day27Solution880Test {
+    Day27Solution880 solution = new Day27Solution880();
 
     @ParameterizedTest
     @CsvSource(value = {

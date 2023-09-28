@@ -1,12 +1,11 @@
-package com.ppojin.leetcode.dailyquestion;
+package com.ppojin.leetcode.daily.m2309;
 
-import com.ppojin.leetcode.dailyquestion.Solution316;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Solution316Test {
-    Solution316 solution = new Solution316();
+class Day26Solution316Test {
+    Day26Solution316 solution = new Day26Solution316();
 
     @Test
     void ex1(){

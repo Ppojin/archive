@@ -1,7 +1,7 @@
-package com.ppojin.leetcode.dailyquestion;
+package com.ppojin.leetcode.daily.m2309;
 
 //880. Decoded String at Index
-public class Solution880 {
+public class Day27Solution880 {
     public String decodeAtIndex(String s, int k) {
         long len = 0;
         int i = 0;

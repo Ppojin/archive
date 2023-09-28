@@ -1,10 +1,10 @@
-package com.ppojin.leetcode.dailyquestion;
+package com.ppojin.leetcode.daily.m2309;
 
 import java.util.*;
 
 // 316. Remove Duplicate Letters
 // https://leetcode.com/problems/remove-duplicate-letters
-public class Solution316 {
+public class Day26Solution316 {
     public String removeDuplicateLetters(String s) {
         int[] lastIndex = new int[26];
         for (int i = 0; i < s.length(); i++){
