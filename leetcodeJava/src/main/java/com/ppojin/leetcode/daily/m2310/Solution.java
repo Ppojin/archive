@@ -1,9 +1,43 @@
 package com.ppojin.leetcode.daily.m2310;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Solution {
+
+    /*
+     * Day 2
+     * 2038. Remove Colored Pieces if Both Neighbors are the Same Color
+     * */
+    public boolean winnerOfGame(String colors) {
+        char past = colors.charAt(0);
+        int count = 1;
+        Map<Character, Integer> score = new HashMap<>();
+        score.put('A', 0);
+        score.put('B', 0);
+
+        for (int i = 1 ; i < colors.length() ; i++){
+            char curr = colors.charAt(i);
+            if (curr == past){
+                count++;
+                if(count >= 3){
+                    score.put(curr, score.get(curr)+1);
+                }
+            } else {
+                count = 1;
+                past = curr;
+            }
+            System.out.printf("curr:%c past:%c count:%d A:%d b:%d\n",
+                    curr, past,
+                    count,
+                    score.get('A'),
+                    score.get('A')
+            );
+        }
+        return score.get('A') > score.get('B');
+    }
 
     /*
         Day1
