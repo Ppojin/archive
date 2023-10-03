@@ -8,6 +8,22 @@ import java.util.stream.Collectors;
 public class Solution {
 
     /*
+    Day 3
+    1512. Number of Good Pairs
+    */
+    public int numIdenticalPairs(int[] nums) {
+        HashMap<Integer, Integer> numMap = new HashMap<>();
+        for(int i : nums){
+            numMap.put(i, numMap.getOrDefault(i, 0) + 1);
+        }
+
+        return numMap.values().stream()
+                .filter(n -> n>=2)
+                .mapToInt(n -> n*(n-1)/2)
+                .sum();
+    }
+
+    /*
      * Day 2
      * 2038. Remove Colored Pieces if Both Neighbors are the Same Color
      * */
