@@ -13,13 +13,13 @@ public class Solution {
     */
     public int numIdenticalPairs(int[] nums) {
         HashMap<Integer, Integer> numMap = new HashMap<>();
-        for(int i : nums){
+        for (int i : nums) {
             numMap.put(i, numMap.getOrDefault(i, 0) + 1);
         }
 
         return numMap.values().stream()
-                .filter(n -> n>=2)
-                .mapToInt(n -> n*(n-1)/2)
+                .filter(n -> n >= 2)
+                .mapToInt(n -> n * (n - 1) / 2)
                 .sum();
     }
 
@@ -34,12 +34,12 @@ public class Solution {
         score.put('A', 0);
         score.put('B', 0);
 
-        for (int i = 1 ; i < colors.length() ; i++){
+        for (int i = 1; i < colors.length(); i++) {
             char curr = colors.charAt(i);
-            if (curr == past){
+            if (curr == past) {
                 count++;
-                if(count >= 3){
-                    score.put(curr, score.get(curr)+1);
+                if (count >= 3) {
+                    score.put(curr, score.get(curr) + 1);
                 }
             } else {
                 count = 1;
@@ -63,7 +63,7 @@ public class Solution {
         return Arrays.stream(s.split(" "))
                 .map((String w) -> {
                     StringBuilder sb = new StringBuilder();
-                    for(int i = 0 ; i < w.length() ; i++){
+                    for (int i = 0; i < w.length(); i++) {
                         sb.append(w.charAt(w.length() - i - 1));
                     }
                     return sb.toString();
