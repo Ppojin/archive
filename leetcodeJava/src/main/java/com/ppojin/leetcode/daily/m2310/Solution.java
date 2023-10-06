@@ -2,12 +2,29 @@ package com.ppojin.leetcode.daily.m2310;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Solution {
 
     /*
-    Day 4
+    Day 6
+    343. Integer Break
+    */
+    public int integerBreak(int n) {
+        if (n == 2) return 1;
+        else if (n == 3) return 2;
+        else if (n == 4) return 4;
+
+        int p = n / 3;
+        int l = n % 3;
+        if (l == 1) {
+            p -= 1;
+            l += 3;
+        }
+        return ((int) Math.pow(3, p)) * (l == 0 ? 1 : l);
+    }
+
+    /*
+    Day 5
     229. Majority Element II
     */
     public List<Integer> majorityElement(int[] nums) {
@@ -34,17 +51,17 @@ public class Solution {
 
         c0 = 0;
         c1 = 0;
-        for (int n: nums){
-            if(n0 == n) c0++;
-            if(n1 == n) c1++;
+        for (int n : nums) {
+            if (n0 == n) c0++;
+            if (n1 == n) c1++;
         }
         System.out.printf("%d %d", c0, c1);
 
-        if (c1 > nums.length / 3 && c0 > nums.length / 3){
+        if (c1 > nums.length / 3 && c0 > nums.length / 3) {
             return List.of(n0, n1);
-        } else if(c0 > nums.length / 3){
+        } else if (c0 > nums.length / 3) {
             return List.of(n0);
-        } else if(c1 > nums.length / 3){
+        } else if (c1 > nums.length / 3) {
             return List.of(n1);
         } else {
             return List.of();

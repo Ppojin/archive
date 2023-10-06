@@ -6,7 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 
+    Solution solution = new Solution();
+
     @Test
-    void winnerOfGame() {
+    void integerBreak(){
+        solution.integerBreak(15);
     }
 }
