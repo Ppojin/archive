@@ -4,6 +4,20 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Solution {
+    /*
+    TODO: move this
+    1. Two Sum
+    */
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0 ; i < nums.length -1 ; i++){
+            for (int j = i+1 ; j < nums.length ; j++){
+                if(nums[i] + nums[j] == target){
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return new int[]{};
+    }
 
     /*
     Day 6
@@ -12,7 +26,6 @@ public class Solution {
     public int integerBreak(int n) {
         if (n == 2) return 1;
         else if (n == 3) return 2;
-        else if (n == 4) return 4;
 
         int p = n / 3;
         int l = n % 3;
